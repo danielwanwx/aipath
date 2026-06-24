@@ -5,6 +5,19 @@ description: Use when someone wants to find their realistic AI career path, map 
 
 # AIPath
 
+AIPath 是一个 AI 转型路径诊断 Skill。它先判断用户更适合哪类 AI 方向，
+再拆目标岗位/JD 的信号，最后给出证据缺口、项目/工作流升级建议、
+面试问题、7 天行动计划和诚实定位。
+
+If the user asks for a quick version, produce a short diagnosis first:
+
+- 1 likely AI direction.
+- 3 evidence gaps.
+- 3 next actions.
+- 1 honest positioning warning.
+
+Then ask whether they want the full report.
+
 Diagnose how close a person is to an AI-related role based on their background, target role
 or JD, and project/workflow evidence.
 

@@ -22,6 +22,27 @@
 
 ## How To Use
 
+### 小红书用户最快使用方式
+
+1. 打开 [`SKILL.md`](./SKILL.md)。
+2. 复制全部内容。
+3. 粘贴到 Claude Code / OpenClaw 这类 Agent。
+4. 再粘贴这句话：
+
+```text
+请使用 AIPath 帮我做一次 AI 转型路径诊断。先按模板向我收集信息；如果信息不完整，也请基于假设继续，并标清楚假设。
+```
+
+5. 按 [`中文输入模板`](./templates/input_template_zh.md) 填你的背景、目标岗位/JD、项目或工作流。
+
+如果你只想先快速看方向，可以加一句：
+
+```text
+先给我 short diagnosis，不要超过 500 字；如果我觉得有用，再展开完整报告。
+```
+
+### General Usage
+
 把 [`SKILL.md`](./SKILL.md) 复制到支持 Skill / Agent workflow 的工具中使用，例如 Claude Code 或 OpenClaw。
 
 如果你的工具支持安装 Skill，可以把这个目录作为 Skill source。  
@@ -65,6 +86,8 @@ Skill 会按这个结构输出：
 
 - [Sample input](./sample_inputs/sde_to_ai_engineer.json)
 - [Sample output](./sample_outputs/sde_to_ai_engineer_output.md)
+- [中文输入模板](./templates/input_template_zh.md)
+- [中文启动提示词](./templates/starter_prompt_zh.md)
 
 ## Xiaohongshu
 
