@@ -1,11 +1,3 @@
-海外账号暂时挂不了 RED Skill 组件，我先把 AIPath 放到 GitHub：
+海外账号暂时挂不了 RED Skill 组件，我先把 AIPath 放到 GitHub：搜 `danielwanwx/aipath`。
 
-https://github.com/danielwanwx/aipath
-
-使用方式：
-1. 打开 README
-2. 复制 SKILL.md
-3. 粘贴到 Claude Code / OpenClaw 这类 Agent
-4. 输入你的背景 + 目标岗位/JD + 项目/工作流 + 最大困惑
-
-它会输出 Role Direction、Evidence Gaps、项目/工作流升级建议和 7-Day Action Plan。
+打开 README，复制 `SKILL.md` 到 Claude Code / OpenClaw，再输入你的背景、目标岗位/JD 和项目/工作流，就能跑一次 AI 转型路径诊断。
