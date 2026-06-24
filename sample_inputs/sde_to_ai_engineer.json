@@ -1,0 +1,24 @@
+{
+  "target_role": "AI Engineer / Forward Deployed Engineer",
+  "target_jd": "Build and deploy LLM-powered workflows for enterprise customers. Work across backend systems, retrieval pipelines, evaluation, observability, and customer-facing implementation. Strong Python, API design, cloud deployment, and communication skills required.",
+  "resume_summary": "Backend SDE with 4 years of experience building APIs and internal tools. Recently built a PDF Q&A RAG demo and experimented with LangChain, OpenAI, and vector databases.",
+  "work_experience_bullets": [
+    "Built REST APIs for internal workflow tools using Python and Postgres.",
+    "Improved backend job reliability and reduced manual operations for support teams.",
+    "Worked with product managers to scope requirements and ship features."
+  ],
+  "projects": [
+    {
+      "name": "PDF Course Notes Q&A",
+      "description": "A local RAG app where users upload PDFs and ask questions.",
+      "stack": ["FastAPI", "Next.js", "OpenAI API", "Chroma", "LangChain"],
+      "evidence": "Manual testing only. No saved eval set. Runs locally."
+    }
+  ],
+  "ai_stack": ["OpenAI API", "LangChain", "Chroma", "basic prompt engineering"],
+  "deployment_evidence": "No AI project deployment yet. Backend services at work are deployed internally.",
+  "evaluation_evidence": "No formal eval. Manually tested 10-15 questions.",
+  "target_company_type": "AI startup or B2B SaaS company",
+  "timeline": "Wants to apply in 3-4 weeks",
+  "biggest_concern": "Resume looks like normal backend SDE, not AI Engineer."
+}

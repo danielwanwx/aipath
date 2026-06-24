@@ -1,0 +1,27 @@
+看完一圈 AI 岗位，我做了一个 RED Skill：AIPath。
+
+先说 AIPath 是干嘛的：它不是一篇路线图，也不是一个简历模板，而是一个可以直接跑的「AI 转型诊断器」。你把自己的背景、目标岗位、已有项目/工作流、用过的 AI 工具、时间线和最大困惑丢进去，它会帮你判断三件事：你现在更适合哪类 AI 方向，离目标岗位还差哪些证据，以及接下来 7 天最应该补什么。
+
+我之所以想把它做成 RED Skill，而不是只写成一篇文章，是因为文章只能告诉你“我怎么看”，但 Skill 可以把这套判断流程拿走复用。RED Skill 你可以理解成「Prompt + AI 能力 + 工作流」打包成的一个小工具。它会挂在小红书笔记下方，用户点进去之后可以复制安装口令，再粘贴到自己的 AI Agent 里，让 Agent 按照这个流程帮你做一次诊断。
+
+使用方式大概是这样：如果你能看到笔记下方的 RED Skill 组件，点进去，点「去使用」，复制安装口令，然后粘贴到 Claude Code / OpenClaw 这类 Agent 里。安装后你只需要按模板填信息：我的背景是什么，我想投什么岗位，我做过什么项目或工作流，我用过哪些 AI 工具，我有没有部署、评估、数据、用户反馈这些证据，我现在最担心什么。填完以后，它会输出一份诊断，而不是只给你几句鼓励。
+
+这也是我想把它做宽一点的原因。它不只是给 SDE 用的。SDE、Backend、Data Engineer 可以用它判断自己离 AI Engineer / FDE / Applied AI Engineer 还有多远；产品、运营、数据分析、咨询、学生也可以用它判断自己是不是更适合 AI PM、AI Ops、automation builder、AI workflow owner，或者先做一个更小的 proof artifact。不是每个人都应该被包装成 AI Engineer，但很多人都需要知道：我的背景到底能不能和 AI 岗位接上，应该接到哪一类岗位上。
+
+这个 Skill 第一件事会做 Role Direction。它不会默认你一定要转 AI Engineer，而是先看你的背景和目标，判断你更像哪条路。比如你是 Backend/SDE，有 API、系统、数据流经验，又做过 RAG 或 agent demo，它可能会建议你往 AI Engineer / FDE 靠；如果你是数据分析或运营，有业务流程、指标、用户洞察经验，但没有工程项目，它可能会建议你先做 AI workflow / AI Ops 方向的证据；如果你是学生或刚开始转型，它会更倾向于让你先做一个可展示的小项目，而不是直接冲很重的 JD。
+
+第二件事是拆 JD。很多人看 AI 岗位只看关键词：Python、RAG、Agent、LLM、LangChain。但真正的岗位信号往往藏在更后面的词里，比如 evaluation、deployment、monitoring、customer workflow、latency、cost、reliability、stakeholder communication。这个 Skill 会把 JD 里的信号拆出来，再和你的经历对照，标出 covered、weak、missing。这样你看到的就不是“我好像差很多”，而是具体差在哪一块。
+
+第三件事是拆证据。它不会只说你缺关键词，而是会问：你有没有证明自己真的做过这件事？比如你说你做了 RAG，它会继续看你有没有 eval set、citation failure log、retrieval setting comparison、latency/token cost 记录、部署 demo、README 里的 tradeoff。如果你不是工程背景，它也会看你有没有一个真实 workflow：输入是什么，AI 在哪一步介入，人怎么 review，质量怎么判断，最后产出什么业务结果。
+
+第四件事是给下一步。这个我觉得是最有用的地方。因为很多人不是不努力，而是不知道下一步到底补什么。Skill 跑完之后会给 Fit Snapshot、Role Direction、JD Signal Map、Evidence Gaps、Positioning Rewrites、Project/Workflow Upgrade Suggestions、Interview Questions、7-Day Action Plan 和 Honest Positioning。简单说，它会告诉你：哪些能写，哪些不能写，哪些现在只能说 prototype，哪些可以说 internal tool，哪些还不能说 production system。
+
+我拿一个 Backend SDE + RAG demo 的样例跑了一遍。原来的项目描述是：Built a RAG chatbot using LangChain and OpenAI。这个描述很常见，但问题是它太薄了，面试官没法从这句话里看到质量、失败、部署、观察和用户场景。Skill 给出的结果不是“你很适合”，而是 Needs project proof，readiness score 51/100。它建议先把项目定位成 document QA prototype，再补 eval set、citation failure log、retrieval setting comparison、latency/token usage 记录，以及 README 里的 failure cases 和 tradeoff。
+
+这个结果听起来没那么爽，但我觉得它更接近真实世界。因为真正能帮助转型的不是一句“你很有潜力”，而是知道自己下一步该补哪一个证据。一个普通 RAG 项目，如果只停留在“能回答问题”，那确实很普通；但如果你能展示它怎么评估质量、怎么记录错误、怎么比较检索策略、什么时候 fallback、上线后怎么看成本和延迟，它就开始变成一个能被面试继续追问的工程项目。
+
+对非 SDE 也是一样。比如你是产品或运营，你不一定要硬写自己做了一个 AI Engineer 项目，但你可以把一个真实工作流做成可验证的 AI workflow：输入是用户反馈、销售记录、客服工单或竞品信息，AI 负责分类、总结、生成建议，人负责 review 和决策，最后输出一份能追踪来源和质量的周报或行动清单。这样的项目不一定叫 AI Engineer 项目，但它可以证明你有 AI workflow ownership，这对很多 AI PM、AI Ops、AI consultant、automation builder 岗位反而更真实。
+
+所以这版 RED Skill 的核心不是“帮你包装成 AI 岗”，而是帮你判断自己到底该怎么进入 AI 岗位市场。它会更诚实地回答：你现在适合投哪类岗位，你缺的是技术项目、业务场景、评估证据、部署证明，还是简历表达；如果你还太早，它也会直接告诉你先做一个更小的 proof artifact，不要硬冲一个接不住的 JD。
+
+我会把这个 RED Skill 挂在这篇笔记下面。能看到组件的话，直接点「去使用」复制口令，然后粘贴到你的 Agent 里跑。如果你暂时看不到组件，评论区发「Skill」或「JD」，我下一篇把输入模板和备用安装方式放出来。
